@@ -19,6 +19,14 @@ export const errorCodes: ErrorCodeRegistry[] = [
     priorite: "Haute",
     dateAjout: "2026-06-25",
     derniereMiseAJour: "2026-06-25",
+    commentaireG2sCortex:
+      "Contrôler que le NIR est alimenté avant génération de la DSN.",
+    familleInes: "Salarié",
+    prioriteInes: "P1",
+    dimensionInes: "Risque",
+    scoreMax: 90,
+    anomalieInes: "Identifiant salarié absent",
+    codeInes: "INES-NIR-001",
   },
   {
     code: "ERR-1-30001-002",
@@ -38,6 +46,14 @@ export const errorCodes: ErrorCodeRegistry[] = [
     priorite: "Haute",
     dateAjout: "2026-06-25",
     derniereMiseAJour: "2026-06-25",
+    commentaireG2sCortex:
+      "Nettoyer les caractères parasites dans le flux d'extraction.",
+    familleInes: "Salarié",
+    prioriteInes: "P1",
+    dimensionInes: "Risque",
+    scoreMax: 85,
+    anomalieInes: "Format NIR invalide",
+    codeInes: "INES-NIR-002",
   },
   {
     code: "ERR-1-30001-003",
@@ -57,6 +73,14 @@ export const errorCodes: ErrorCodeRegistry[] = [
     priorite: "Haute",
     dateAjout: "2026-06-25",
     derniereMiseAJour: "2026-06-25",
+    commentaireG2sCortex:
+      "Vérifier la longueur transmise par le SIRH et la clé de contrôle.",
+    familleInes: "Salarié",
+    prioriteInes: "P1",
+    dimensionInes: "Risque",
+    scoreMax: 80,
+    anomalieInes: "Longueur NIR incorrecte",
+    codeInes: "INES-NIR-003",
   },
   {
     code: "WRN-2-30001-001",
@@ -76,6 +100,14 @@ export const errorCodes: ErrorCodeRegistry[] = [
     priorite: "Moyenne",
     dateAjout: "2026-06-25",
     derniereMiseAJour: "2026-06-25",
+    commentaireG2sCortex:
+      "Cas à confirmer si les autres identifiants salarié sont concordants.",
+    familleInes: "Salarié",
+    prioriteInes: "P2",
+    dimensionInes: "Pilotage",
+    scoreMax: 55,
+    anomalieInes: "Clé de contrôle à vérifier",
+    codeInes: "INES-NIR-004",
   },
   {
     code: "ERR-1-30001-004",
@@ -95,5 +127,13 @@ export const errorCodes: ErrorCodeRegistry[] = [
     priorite: "Haute",
     dateAjout: "2026-06-25",
     derniereMiseAJour: "2026-06-25",
+    commentaireG2sCortex:
+      "Bloquer le traitement si aucune autre identification ne concorde.",
+    familleInes: "Salarié",
+    prioriteInes: "P1",
+    dimensionInes: "Risque",
+    scoreMax: 95,
+    anomalieInes: "Suspicion d'identification incorrecte",
+    codeInes: "INES-NIR-005",
   },
 ]
