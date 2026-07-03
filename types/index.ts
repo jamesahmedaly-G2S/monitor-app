@@ -1,11 +1,22 @@
-export type ErrorStatus = "Actif" | "Obsolète" | "En Révision"
 
-export type ErrorPriority = "Basse" | "Moyenne" | "Haute" | "Critique"
+export type ErrorPriority = "Basse" | "Moyenne" | "Haute" 
+
+export type ErrorType = "ERR" | "WRN" | "ALT"
+
+export type Categorie = "Saisie" | "Paramétrique" 
+
+export type ErrorStatus = "Actif" | "Non actif" | "En cours"
+
+export type ErrorFailleInes = "Salarié" | "DSN" | "Paie" | "Calcul IJSS" | "Cas complexes" | "Recouvrement" | "Charges sociales" | "Subrogation" 
+
+export type ErrorPrioriteInes = "P1" | "P2" | "P3"
+
+export type ErrorDimensionInes = "Salarié" | "Pilotage" | "Financière" | "Risque" | "Charges" 
 
 export interface ErrorCodeRegistry {
   code: string
-  type: string
-  categorie: string
+  type: ErrorType
+  categorie: Categorie
   sousCategorieDsn: string
   nom: string
   description: string
@@ -19,9 +30,9 @@ export interface ErrorCodeRegistry {
   dateAjout: string
   derniereMiseAJour: string
   commentaireG2sCortex?: string
-  familleInes?: string
-  prioriteInes?: string
-  dimensionInes?: string
+  familleInes?: ErrorFailleInes
+  prioriteInes?: ErrorPrioriteInes
+  dimensionInes?: ErrorDimensionInes
   scoreMax?: number
   anomalieInes?: string
   codeInes?: string
